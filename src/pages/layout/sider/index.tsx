@@ -107,20 +107,10 @@ function SiderMenu({ collapsed, setVisible }: IHeaderProps) {
 
   return (
     <>
-      <div className="h-16 text-center text-6xl italic cursor-pointer" onClick={backHome}>
+      <div className="h-16 text-center text-6xl italic cursor-pointer text-blue-400" onClick={backHome}>
         {collapsed ? 'C' : 'CINS'}
       </div>
-      <Menu theme={configStore.themeStyle} mode="inline" selectedKeys={[configStore.activeItem.key]} onClick={handleClickItem} items={menuList}>
-        {/* {menuList.map((item) => (
-          <SubMenu key={item.key} icon={item.icon} title={item.title}>
-            {item.children.map((item1) => (
-              <Menu.Item key={item1.key}>
-                <Link to={item1.path}>{item1.title}</Link>
-              </Menu.Item>
-            ))}
-          </SubMenu>
-        ))} */}
-      </Menu>
+      <Menu theme={configStore.themeStyle} mode="inline" selectedKeys={[configStore.activeItem.key]} onClick={handleClickItem} items={menuList}></Menu>
     </>
   );
 }

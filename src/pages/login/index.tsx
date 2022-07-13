@@ -28,7 +28,7 @@ function Login() {
       <Spin spinning={loading}>
         <Form
           name="normal_login"
-          className="max-w-300 !m-auto"
+          className="max-w-xs !m-auto"
           initialValues={{
             remember: true,
           }}

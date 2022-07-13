@@ -20,10 +20,17 @@ const routes: Array<router> = [
     path: '/',
     name: 'layout',
     component: lazy(() => import('@/pages/layout/index')),
+    children: [
+      {
+        path: '/',
+        name: 'home',
+        component: lazy(() => import('@/pages/home/index')),
+      },
+      ...manage,
+      ...diary,
+      ...moment,
+    ],
   },
-  ...manage,
-  ...diary,
-  ...moment,
 ];
 
 export default routes;

@@ -114,20 +114,19 @@ function HeaderNav({ width }: IHeaderProps) {
 
   // 国际化菜单
   const languageMenu = (
-    <Menu onClick={handleSelect} selectedKeys={locales}>
-      <Menu.Item key="zh_CN">🇨🇳 简体中文</Menu.Item>
-      <Menu.Item key="en_US">🇬🇧 English</Menu.Item>
-    </Menu>
+    <Menu
+      onClick={handleSelect}
+      selectedKeys={locales}
+      items={[
+        { label: '🇨🇳 简体中文', key: 'zh_CN' },
+        { label: '🇬🇧 English', key: 'en_US' },
+      ]}
+    ></Menu>
   );
 
   // 用户下拉设置
-  const userMenu = (
-    <Menu onClick={handleUserLogout}>
-      <Menu.Item key="logout">
-        <ImportOutlined /> 退出登录
-      </Menu.Item>
-    </Menu>
-  );
+  const userMenu = <Menu onClick={handleUserLogout} items={[{ label: '退出登录', key: 'logout', icon: <ImportOutlined /> }]}></Menu>;
+
   return (
     <div className="flex justify-between items-center relative w-full text-black text-opacity-60">
       {/* 面包屑导航 */}
@@ -145,26 +144,26 @@ function HeaderNav({ width }: IHeaderProps) {
       <div className="flex">
         {/* 用户信息  */}
         <Dropdown overlay={userMenu} placement="bottomRight">
-          <div className="w-14 text-center cursor-pointer hover:bg-gray-400">
+          <div className="w-14 text-center cursor-pointer hover:bg-gray-100">
             <Avatar src={user} />
           </div>
         </Dropdown>
 
         {/* 国际化 */}
         <Dropdown overlay={languageMenu} placement="bottomRight">
-          <div className="w-10 text-center cursor-pointer hover:bg-gray-400">
-            <GlobalOutlined />
+          <div className="w-10 text-center cursor-pointer hover:bg-gray-100">
+            <GlobalOutlined className="text-base" />
           </div>
         </Dropdown>
 
         {/* github */}
-        <div className="w-10 text-center cursor-pointer hover:bg-gray-400" title="cins-admin" onClick={handleLinkGit}>
-          <GithubFilled />
+        <div className="w-10 text-center cursor-pointer hover:bg-gray-100" title="cins-admin" onClick={handleLinkGit}>
+          <GithubFilled className="text-base" />
         </div>
 
         {/* 设置 */}
-        <div className="w-10 text-center cursor-pointer hover:bg-gray-400" onClick={() => setVisible(true)}>
-          <SettingOutlined />
+        <div className="w-10 text-center cursor-pointer hover:bg-gray-100" onClick={() => setVisible(true)}>
+          <SettingOutlined className="text-base" />
         </div>
       </div>
 

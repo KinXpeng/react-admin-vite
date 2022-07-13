@@ -43,7 +43,7 @@ function LayoutConfig() {
       {/* 侧边栏适配移动端 */}
       {width < 650 ? (
         <Drawer placement="left" width="80%" visible={visible} onClose={onClose} closable={false} bodyStyle={{ padding: 0 }}>
-          <Sider width="100%" style={{ height: '100%' }} collapsedWidth={0} theme={configStore.themeStyle} trigger={null} className="cs-aside">
+          <Sider collapsedWidth={0} theme={configStore.themeStyle} trigger={null} className="cs-aside !w-full h-full !max-w-none">
             <SiderMenu setVisible={setVisible} />
           </Sider>
         </Drawer>
@@ -53,7 +53,7 @@ function LayoutConfig() {
         </Sider>
       )}
       <Layout>
-        <Header className="!bg-white shadow-box" style={{ display: 'flex', padding: 0, alignItems: 'center' }}>
+        <Header className="flex items-center !bg-white shadow-box !p-0">
           {width < 650 ? (
             <span className="w-24 text-5xl italic text-center text-red-300 cursor-pointer" onClick={backHome}>
               C
@@ -62,7 +62,7 @@ function LayoutConfig() {
             ''
           )}
           {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-            className: 'flex items-center h-full py-0 px-6 cursor-pointer transition-color duration-300 text-gray-500 mr-2.5 hover:bg-gray-200',
+            className: '!flex items-center h-full py-0 px-6 cursor-pointer transition-color duration-300 text-gray-500 mr-2.5 text-base hover:bg-gray-100',
             onClick: toggle,
           })}
           <HeaderNav width={width} />

@@ -9,13 +9,11 @@ This project was bootstrapped with [vite](https://cn.vitejs.dev/guide/#scaffoldi
 - 项目预览：https://admin.cins.cc （账号、密码任意）
 
 - 所用技术/UI 框架
-  - 脚手架：`create-react-app`
   - React Hooks
   - 路由（v6 版本）：`react-router-dom`
   - 全局状态管理：`mobx` `mobx-react-lite`
-  - CSS 预编译器（css Modules）：`sass`
+  - 配置了强大的CSS工具：`tailwindcss`
   - UI 框架：`antd`
-  - 配置别名（配置@路径简化路径处理）：`@craco/craco`
   - 国际化：`i18next` `react-i18next`
   - Ajax 数据请求：`axios`
 - 功能实现：（界面设计参照了 antd-pro 的风格）
@@ -29,7 +27,6 @@ This project was bootstrapped with [vite](https://cn.vitejs.dev/guide/#scaffoldi
   - axios 封装：基于`axios`统一处理，实现请求以及响应拦截，全局接口统一管理。
   - token 持久化：封装工具函数使用本地储存实现 token 持久化。
   - mobx 状态管理：以`mobx-react-lite` 作为链接包，实现数据响应式；按功能拆分 store，实现 mobx 的模块化。
-  - setupProxy：数据请求跨域代理配置。
 
 ## Available Scripts
 
