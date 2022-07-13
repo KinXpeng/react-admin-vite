@@ -159,3 +159,17 @@ body {
   -moz-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility;
 }
+
+// cs-aside
+.cs-aside :global(.ant-menu) {
+  height: calc(100% - 64px);
+}
+
+.cs-aside :global(.ant-menu-root) {
+  box-shadow: 2px 4px 4px 0 rgb(0 35 41 / 8%);
+}
+
+.cs-aside :global(.ant-menu-inline),
+.cs-aside :global(.ant-menu-vertical) {
+  border-right: none;
+}

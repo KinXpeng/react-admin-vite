@@ -9,15 +9,19 @@ interface themeColor {
   infoColor: string;
 }
 
+interface itemConfig {
+  [propName: string]: any;
+}
+
 // 全局配置
 class ConfigStore {
   constructor() {
     makeAutoObservable(this);
   }
-  parentItem = '11'; // 默认激活的一级菜单
-  activeItem = '22'; // 默认激活的二级菜单
+  parentItem: itemConfig = {}; // 默认激活的一级菜单
+  activeItem: itemConfig = {}; // 默认激活的二级菜单
   locale = localStorage.getItem('locale') ? localStorage.getItem('locale') : 'zh_CN'; // 默认中文
-  themeStyle = localStorage.getItem('themeStyle') ? localStorage.getItem('themeStyle') : 'dark'; // 整体风格
+  themeStyle: any = localStorage.getItem('themeStyle') ? localStorage.getItem('themeStyle') : 'dark'; // 整体风格
   theme: themeColor = {
     primaryColor: localStorage.getItem('primaryColor') ? localStorage.getItem('primaryColor') : '#1890FF',
     errorColor: '#ff4d4f',
@@ -30,7 +34,7 @@ class ConfigStore {
   operateCrumbMenu = (item: any) => {
     this.parentItem = item;
     let parentNode = {
-      title: item.title,
+      label: item.label,
       key: item.key,
     };
     localStorage.setItem('parentItem', JSON.stringify(parentNode));
@@ -44,8 +48,8 @@ class ConfigStore {
 
   // 点击logo返回首页
   crumbItem = () => {
-    this.activeItem = '';
-    this.parentItem = '';
+    this.activeItem = {};
+    this.parentItem = {};
     localStorage.removeItem('activeItem');
     localStorage.removeItem('parentItem');
   };

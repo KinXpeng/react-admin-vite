@@ -1,4 +1,7 @@
 import { lazy } from 'react';
+import { manage } from './childRoutes/manage'; // 面板管理
+import { diary } from './childRoutes/diary'; // 日记管理
+import { moment } from './childRoutes/moment'; // 我的状态
 
 interface router {
   path: string;
@@ -18,6 +21,9 @@ const routes: Array<router> = [
     name: 'layout',
     component: lazy(() => import('@/pages/layout/index')),
   },
+  ...manage,
+  ...diary,
+  ...moment,
 ];
 
 export default routes;
