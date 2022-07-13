@@ -9,8 +9,13 @@
   },
   "dependencies": {
     "antd": "^4.21.6",
+    "i18next": "^21.8.13",
+    "mobx": "^6.6.1",
+    "mobx-react-lite": "^3.4.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-i18next": "^11.18.0",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
