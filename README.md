@@ -6,13 +6,13 @@ This project was bootstrapped with [vite](https://cn.vitejs.dev/guide/#scaffoldi
 
 - 项目是基于 `vite` 搭建的后台管理系统（react18 版本），所有页面及功能采用函数式组件及 hooks 实现。
 
-- 项目预览：https://admin.cins.cc （账号、密码任意）
+- 项目预览：https://temp.cins.cc （账号、密码任意）
 
 - 所用技术/UI 框架
   - React Hooks
   - 路由（v6 版本）：`react-router-dom`
   - 全局状态管理：`mobx` `mobx-react-lite`
-  - 配置了强大的CSS工具：`tailwindcss`
+  - 配置了强大的 CSS 工具：`tailwindcss`
   - UI 框架：`antd`
   - 国际化：`i18next` `react-i18next`
   - Ajax 数据请求：`axios`

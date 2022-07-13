@@ -160,7 +160,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-// cs-aside
+/* cs-aside */
 .cs-aside :global(.ant-menu) {
   height: calc(100% - 64px);
 }
