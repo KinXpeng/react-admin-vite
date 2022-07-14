@@ -6,7 +6,7 @@ This project was bootstrapped with [vite](https://cn.vitejs.dev/guide/#scaffoldi
 
 - 项目是基于 `vite` 搭建的后台管理系统（react18 版本），所有页面及功能采用函数式组件及 hooks 实现。
 
-- 项目预览：https://temp.cins.cc （账号、密码任意）
+- 项目预览：https://temp.cins.cc
 
 - 所用技术/UI 框架
   - React Hooks
@@ -32,7 +32,7 @@ This project was bootstrapped with [vite](https://cn.vitejs.dev/guide/#scaffoldi
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start` or`yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3003](http://localhost:3003) to view it in your browser.
@@ -45,7 +45,7 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `npm run build` or `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
