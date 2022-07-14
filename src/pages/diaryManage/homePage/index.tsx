@@ -2,7 +2,6 @@ import ApiModules from '@/http/modules'
 import { Button } from 'antd'
 
 function DiaryList() {
-
 	const handleFetchTest = async () => {
 		try {
 			const { test } = ApiModules.modules
@@ -11,13 +10,14 @@ function DiaryList() {
 		} catch (err) {
 			console.log(err, 'err')
 		}
-
 	}
 
 	return (
 		<div>
 			<p>日记测试页面</p>
-			<Button onClick={handleFetchTest}>api</Button>
+			<Button type='primary' onClick={handleFetchTest}>
+				api
+			</Button>
 		</div>
 	)
 }
