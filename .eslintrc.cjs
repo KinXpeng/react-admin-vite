@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  node: true,
   extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -93,4 +94,5 @@ module.exports = {
     // 禁止未使用的变量
     'no-unused-vars': 0,
   },
+  extends: ['prettier'],
 };

@@ -13,7 +13,7 @@ function Login() {
   const [loading, setLoading] = useState(false);
   // 登录
   const onFinish = (values: any) => {
-    // console.log('Received values of form: ', values);
+    console.log('Received values of form: ', values);
     basicStore.login();
     // message.success(t('login.success'));
     setLoading(true);
