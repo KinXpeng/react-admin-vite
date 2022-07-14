@@ -15,7 +15,7 @@ function DiaryList() {
 	return (
 		<div>
 			<p>日记测试页面</p>
-			<Button type='primary' onClick={handleFetchTest}>
+			<Button type="primary" onClick={handleFetchTest}>
 				api
 			</Button>
 		</div>

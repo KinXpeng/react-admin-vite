@@ -9,7 +9,5 @@ const noToken = () => {
 export const errorHandler: IErrorHandler = {
 	401: noToken,
 	403: () => {},
-	500: () => {},
+	500: () => {}
 }
-
-

@@ -5,10 +5,10 @@ import { message } from 'antd'
 import { errorHandler } from '@/http/request/errorHandler'
 
 /*
-* TODO: 取消请求
-*  		请求进度条
-* 		请求方法封装
-* */
+ * TODO: 取消请求
+ *  		请求进度条
+ * 		请求方法封装
+ * */
 export default class NRequest {
 	private _instance: AxiosInstance | undefined
 
@@ -38,7 +38,6 @@ export default class NRequest {
 	private requestInterceptor() {
 		this.instance!.interceptors.request.use(
 			(config: AxiosRequestConfig = {}) => {
-
 				if (config.headers) {
 					config.headers.Authorization = getToken()
 				}
@@ -63,7 +62,7 @@ export default class NRequest {
 
 					// 不是成功状态码
 					if (data[ResponseKey.code] !== ResponseCode.success) {
-						message.error((data[ResponseKey.message]))
+						message.error(data[ResponseKey.message])
 
 						// 其它状态码转交给errorHandler 处理
 						errorHandler[data[ResponseKey.code] as keyof typeof errorHandler]()

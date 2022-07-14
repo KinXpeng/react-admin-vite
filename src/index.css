@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #root {
-  height: 100%;
+	height: 100%;
 }
 
 html,
@@ -87,13 +87,13 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 14px;
-  font: inherit;
-  vertical-align: baseline;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 14px;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -108,68 +108,69 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+	display: block;
 }
 
 body {
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+	quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
 
 a,
 a:hover {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 html,
 body {
-  width: 100%;
-  height: 100%;
-  font-family: 'Microsoft YaHei', 'PingFangSC-Light', 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', 'Arial', 'sans-serif';
+	width: 100%;
+	height: 100%;
+	font-family: 'Microsoft YaHei', 'PingFangSC-Light', 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', 'Arial',
+		'sans-serif';
 }
 
 .cs-font {
-  font-weight: 300;
-  -webkit-text-rendering: optimizeLegibility;
-  -moz-text-rendering: optimizeLegibility;
-  text-rendering: optimizeLegibility;
+	font-weight: 300;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
 }
 
 /* cs-aside */
 .cs-aside :global(.ant-menu) {
-  height: calc(100% - 64px);
+	height: calc(100% - 64px);
 }
 
 .cs-aside :global(.ant-menu-root) {
-  box-shadow: 2px 4px 4px 0 rgb(0 35 41 / 8%);
+	box-shadow: 2px 4px 4px 0 rgb(0 35 41 / 8%);
 }
 
 .cs-aside :global(.ant-menu-inline),
 .cs-aside :global(.ant-menu-vertical) {
-  border-right: none;
+	border-right: none;
 }

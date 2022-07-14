@@ -1,9 +1,9 @@
 function MomentStatus() {
-  return (
-    <div>
-      <p>状态测试页面</p>
-    </div>
-  );
+	return (
+		<div>
+			<p>状态测试页面</p>
+		</div>
+	)
 }
 
-export default MomentStatus;
+export default MomentStatus

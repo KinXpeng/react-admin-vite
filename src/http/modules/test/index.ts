@@ -1,6 +1,5 @@
 import NRequest from '@/http/request/request'
 
-
 class FetchTest extends NRequest {
 	// api前缀
 	private static prefix: string = '/artist'
@@ -13,11 +12,7 @@ class FetchTest extends NRequest {
 		super({ baseURL }, FetchTest.prefix)
 	}
 
-	public search = (params: TestParams.IartistTopSong) => this.instance!.get(
-		this.apiDict.artistTopSong,
-		{ params }
-	)
-
+	public search = (params: TestParams.IartistTopSong) => this.instance!.get(this.apiDict.artistTopSong, { params })
 }
 
 export default FetchTest

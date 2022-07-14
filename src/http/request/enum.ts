@@ -1,4 +1,3 @@
-
 export enum ResponseKey {
 	code = 'code', // 状态码
 	message = 'message', // 返回消息
@@ -9,7 +8,6 @@ export enum ResponseKey {
 export enum ResponseCode {
 	success = 200,
 	noToken = 401,
-	accessDenied= 403,
+	accessDenied = 403,
 	fail = 500
-
 }
