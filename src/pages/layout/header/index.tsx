@@ -109,7 +109,7 @@ function HeaderNav({ width }: IHeaderProps) {
 
   // 跳转git
   const handleLinkGit = () => {
-    window.open('https://github.com/KinXpeng/cins-admin');
+    window.open('https://github.com/KinXpeng/react-admin-vite');
   };
 
   // 国际化菜单

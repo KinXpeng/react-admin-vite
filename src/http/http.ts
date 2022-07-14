@@ -1,6 +1,7 @@
 import axios from 'axios';
+import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
-const instance = axios.create({
+const instance: AxiosInstance = axios.create({
   // 固定请求地址
   baseURL: '/api', // 可以改成你想要的地址
   // 请求超时时间
@@ -13,32 +14,32 @@ const instance = axios.create({
 
 // 创建请求拦截
 instance.interceptors.request.use(
-  (config) => {
+  (config: AxiosRequestConfig) => {
     // config.headers.token = '123';
     return config;
   },
-  (error) => {
+  (err: any) => {
     // 错误抛到业务代码
-    error.data = {};
-    error.data.msg = '服务器异常，请联系管理员！';
-    return Promise.resolve(error);
+    err.data = {};
+    err.data.msg = '服务器异常，请联系管理员！';
+    return Promise.resolve(err);
   }
 );
 
 // 创建响应拦截
 instance.interceptors.response.use(
-  (res) => {
+  (res: AxiosResponse) => {
     if (res.status === 200) {
       return res;
     }
   },
-  (err) => {
+  (err: any) => {
     return Promise.reject(err);
   }
 );
 
 /* 统一封装get请求 */
-export const get = (url: string, params: any, config = {}) => {
+export const get = (url: string, params?: any, config = {}) => {
   return new Promise((resolve, reject) => {
     instance({
       method: 'get',
@@ -46,17 +47,17 @@ export const get = (url: string, params: any, config = {}) => {
       params,
       ...config,
     })
-      .then((response) => {
-        resolve(response);
+      .then((res: AxiosResponse) => {
+        resolve(res);
       })
-      .catch((error) => {
-        reject(error);
+      .catch((err: any) => {
+        reject(err);
       });
   });
 };
 
 /* 统一封装post请求  */
-export const post = (url: string, data: any, config = {}) => {
+export const post = (url: string, data?: any, config = {}) => {
   return new Promise((resolve, reject) => {
     instance({
       method: 'post',
@@ -64,11 +65,11 @@ export const post = (url: string, data: any, config = {}) => {
       data,
       ...config,
     })
-      .then((response) => {
-        resolve(response);
+      .then((res: AxiosResponse) => {
+        resolve(res);
       })
-      .catch((error) => {
-        reject(error);
+      .catch((err: any) => {
+        reject(err);
       });
   });
 };
