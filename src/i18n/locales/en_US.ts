@@ -25,8 +25,8 @@ const en_US = {
 	login: {
 		remember: 'Remember me',
 		login: 'Login',
-		username: 'Username',
-		password: 'Password',
+		username: 'Username: admin',
+		password: 'Password: 123456',
 		username_check: 'Please input your Username!',
 		password_check: 'Please input your Password!',
 		success: 'Login Success!',

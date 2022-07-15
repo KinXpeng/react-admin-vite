@@ -25,8 +25,8 @@ const zh_CN = {
 	login: {
 		remember: '记住密码',
 		login: '登录',
-		username: '用户名',
-		password: '密码',
+		username: '用户名：admin',
+		password: '密码：123456',
 		username_check: '请输入用户名',
 		password_check: '请输入密码',
 		success: '登录成功！',

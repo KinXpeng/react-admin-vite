@@ -33,8 +33,9 @@ function Login() {
 		}
 	}
 	return (
-		<div className="w-full h-full pt-60">
+		<div className="w-full h-full">
 			<Spin spinning={loading}>
+				<div className="h-64 mb-3 bg-white"></div>
 				<Form
 					name="normal_login"
 					className="max-w-xs !m-auto"
@@ -72,11 +73,7 @@ function Login() {
 					<Form.Item>
 						<Form.Item name="remember" valuePropName="checked" noStyle>
 							<div className="flex items-center">
-								<Checkbox className="select-none">{t('login.remember')}</Checkbox>
-								<p className="mb-0 text-gray-500 text-xs">
-									<span>（{t('login.username')}：admin </span>
-									<span>{t('login.password')}：123456）</span>
-								</p>
+								<Checkbox className="w-2/5 select-none">{t('login.remember')}</Checkbox>
 							</div>
 						</Form.Item>
 					</Form.Item>

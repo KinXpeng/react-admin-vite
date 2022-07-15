@@ -1,4 +1,4 @@
-# React-admin-vite
+# react-admin-vite
 
 This project was bootstrapped with [vite](https://cn.vitejs.dev/guide/#scaffolding-your-first-vite-project).
 
