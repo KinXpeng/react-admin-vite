@@ -1,12 +1,12 @@
-import ApiModules from '@/http/modules'
+import { fetchTestApi } from '@/http'
 import { Button } from 'antd'
 
 function DiaryList() {
 	const handleFetchTest = async () => {
 		try {
-			const { test } = ApiModules.modules
-			const data = await test.search({ id: '6452' })
-			console.log(data)
+			fetchTestApi('111').then((res) => {
+				console.log(res)
+			})
 		} catch (err) {
 			console.log(err, 'err')
 		}

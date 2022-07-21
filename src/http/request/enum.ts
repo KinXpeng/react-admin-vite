@@ -1,13 +1,14 @@
-export enum ResponseKey {
-	code = 'code', // 状态码
-	message = 'message', // 返回消息
-	data = 'data' // 数据
+// 状态码 按需更改
+export enum ResponseCode {
+	SUCCESS = 200,
+	BAD_REQUEST = 400,
+	No_AUTHENTICATION = 401,
+	Fail = 500
 }
 
-// 自定义状态码返回对应数据
-export enum ResponseCode {
-	success = 200,
-	noToken = 401,
-	accessDenied = 403,
-	fail = 500
+// 返回的数据模型
+export enum ResponseKey {
+	CODE = 'code',
+	RESULT = 'data',
+	MESSAGE = 'message'
 }

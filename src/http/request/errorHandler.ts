@@ -1,13 +1,15 @@
-import type { IErrorHandler } from '@/http/request/interface'
-import { clearToken } from '@/utils/token'
+import { ResponseCode } from './enum'
 
-const noToken = () => {
-	console.log('noToken')
-	clearToken()
+const ErrorHandle = {
+	[ResponseCode.Fail]() {
+		console.log('失败')
+	},
+	[ResponseCode.BAD_REQUEST]() {
+		console.log('坏请求')
+	},
+	[ResponseCode.No_AUTHENTICATION]() {
+		console.log('没有token')
+	}
 }
 
-export const errorHandler: IErrorHandler = {
-	401: noToken,
-	403: () => {},
-	500: () => {}
-}
+export default ErrorHandle
