@@ -175,6 +175,7 @@ body {
 	border-right: none;
 }
 
+/* 解决message提示框图标错位 */
 .ant-message .ant-message-custom-content {
 	display: flex;
 	align-items: center;
