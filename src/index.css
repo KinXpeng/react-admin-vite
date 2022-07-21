@@ -182,3 +182,13 @@ body {
 .ant-message .anticon {
 	top: 0 !important;
 }
+
+/* 解决右边闪烁 */
+.ant-zoom-big-leave.ant-zoom-big-leave-active {
+	display: none;
+}
+
+/* 解决第一次左上角闪烁 */
+.ant-zoom-big-leave-start .ant-menu {
+	display: none;
+}
