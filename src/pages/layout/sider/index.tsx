@@ -107,7 +107,7 @@ function SiderMenu({ collapsed, setVisible }: IHeaderProps) {
 
 	return (
 		<>
-			<div className="h-16 text-center text-6xl italic cursor-pointer text-blue-400" onClick={backHome}>
+			<div className="h-16 text-center text-6xl italic cursor-pointer text-blue-400 overflow-hidden" onClick={backHome}>
 				{collapsed ? 'C' : 'CINS'}
 			</div>
 			<Menu
