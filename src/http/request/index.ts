@@ -72,7 +72,7 @@ class NRequest {
 		return this.instance!.request(config)
 	}
 
-	public get = <T>(url: string, params: any, config: AxiosRequestConfig = {}): Promise<Result<T>> => {
+	public get = <T>(url: string, params: any = {}, config: AxiosRequestConfig = {}): Promise<Result<T>> => {
 		const option: AxiosRequestConfig = {
 			url,
 			method: 'GET',
@@ -82,7 +82,7 @@ class NRequest {
 		return this.request(option)
 	}
 
-	public post = <T>(url: string, data: any, config: AxiosRequestConfig = {}): Promise<Result<T>> => {
+	public post = <T>(url: string, data: any = {}, config: AxiosRequestConfig = {}): Promise<Result<T>> => {
 		const option: AxiosRequestConfig = {
 			url,
 			method: 'POST',
@@ -98,8 +98,6 @@ const { get, post } = new NRequest({
 	baseURL: '/api'
 })
 
-// export const get = request.get
-// export const post = request.post
 export { get, post }
 
 export default NRequest
