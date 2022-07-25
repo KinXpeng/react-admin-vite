@@ -1,6 +1,12 @@
-# react-admin-vite
+<h1 align="center">React-admin-vite</h1>
 
-This project was bootstrapped with [vite](https://cn.vitejs.dev/guide/#scaffolding-your-first-vite-project).
+<div align="center">
+
+A simple template of react.
+
+[![OSCS Status](https://www.oscs1024.com/platform/badge/KinXpeng/react-admin-vite.svg?size=small)](https://www.oscs1024.com/project/KinXpeng/react-admin-vite?ref=badge_small)
+
+</div>
 
 ## Project introduction
 
