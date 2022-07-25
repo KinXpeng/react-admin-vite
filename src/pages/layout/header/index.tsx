@@ -177,7 +177,7 @@ function HeaderNav({ width }: IHeaderProps) {
 					<div className="flex">
 						{themeList.map((item) => (
 							<span
-								className="relative w-50 h-10 mr-4 rounded cursor-pointer"
+								className="relative w-12 h-10 mr-4 rounded cursor-pointer"
 								key={item.style}
 								onClick={() => configStore.switchStyle(item.style)}
 							>
