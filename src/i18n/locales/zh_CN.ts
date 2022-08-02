@@ -7,19 +7,19 @@ const zh_CN = {
 		theme_color: '主题色'
 	},
 	aside: {
-		manage: {
+		panel: {
 			nav: '面板管理',
-			analysis_panel: '分析面板',
+			analysis_panel: '分析面板'
+		},
+		list: {
+			nav: '列表管理',
+			diary_list: '日记列表',
+			diary_records: '日记记录',
 			user_list: '用户列表'
 		},
-		diary: {
-			nav: '日记管理',
-			diary_list: '日记列表',
-			diary_records: '日记记录'
-		},
-		moment: {
-			nav: '时刻状态',
-			moment_status: '我的状态'
+		personal: {
+			nav: '个人中心',
+			personal_status: '我的状态'
 		}
 	},
 	login: {

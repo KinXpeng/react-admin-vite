@@ -1,7 +1,7 @@
 import { lazy } from 'react'
 import { manage } from './modules/manage' // 面板管理
-import { diary } from './modules/diary' // 日记管理
-import { moment } from './modules/moment' // 我的状态
+import { list } from './modules/list' // 日记管理
+import { personal } from './modules/personal' // 我的状态
 
 interface router {
 	path: string
@@ -27,8 +27,8 @@ const routes: Array<router> = [
 				component: lazy(() => import('@/pages/home/index'))
 			},
 			...manage,
-			...diary,
-			...moment
+			...list,
+			...personal
 		]
 	}
 ]

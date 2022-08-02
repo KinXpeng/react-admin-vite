@@ -7,19 +7,19 @@ const en_US = {
 		theme_color: 'Theme Color'
 	},
 	aside: {
-		manage: {
+		panel: {
 			nav: 'Panel Manage',
-			analysis_panel: 'Analysis Panel',
+			analysis_panel: 'Analysis Panel'
+		},
+		list: {
+			nav: 'List Manage',
+			diary_list: 'Diary List',
+			diary_records: 'Diary Records',
 			user_list: 'User List'
 		},
-		diary: {
-			nav: 'Diary Manage',
-			diary_list: 'Diary List',
-			diary_records: 'Diary Records'
-		},
-		moment: {
-			nav: 'Moment Status',
-			moment_status: 'My Moment'
+		personal: {
+			nav: 'Personal Center',
+			personal_status: 'My Moment'
 		}
 	},
 	login: {
