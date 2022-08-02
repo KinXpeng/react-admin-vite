@@ -5,8 +5,8 @@ import { Menu } from 'antd'
 import type { MenuProps } from 'antd'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { PicRightOutlined, TableOutlined, SmileOutlined } from '@ant-design/icons'
 import { menus } from '@/components/menus/index'
+import { Item } from '@/components/menus/index.d'
 
 interface IHeaderProps {
 	collapsed?: boolean
@@ -18,84 +18,32 @@ function SiderMenu({ collapsed, setVisible }: IHeaderProps) {
 	const { t } = useTranslation()
 	const navigate = useNavigate() // 路由跳转
 	const location = useLocation()
-	const [menuList, setMenuList] = useState([
-		// 菜单列表
-		{
-			key: 'panel',
-			icon: <PicRightOutlined />,
-			label: t('aside.panel.nav'),
-			children: [
-				{
-					path: '/analysisPanel',
-					key: 'analysisPanel',
-					label: t('aside.panel.analysis_panel'),
-					onClick: () => navigate('/analysisPanel')
-				}
-			]
-		},
-		{
-			key: 'list',
-			icon: <TableOutlined />,
-			label: t('aside.list.nav'),
-			children: [
-				{
-					path: '/userList',
-					key: 'userList',
-					label: t('aside.list.user_list'),
-					onClick: () => navigate('/userList')
-				},
-				{
-					path: '/diaryList',
-					key: 'diaryList',
-					label: t('aside.list.diary_list'),
-					onClick: () => navigate('/diaryList')
-				},
-				{
-					path: '/diaryRecords',
-					key: 'diaryRecords',
-					label: t('aside.list.diary_records'),
-					onClick: () => navigate('/diaryRecords')
-				}
-			]
-		},
-		{
-			key: 'personal',
-			icon: <SmileOutlined />,
-			label: t('aside.personal.nav'),
-			children: [
-				{
-					path: '/personalStatus',
-					key: 'personalStatus',
-					label: t('aside.personal.personal_status'),
-					onClick: () => navigate('/personalStatus')
-				}
-			]
-		}
-	])
-
-	// menus.forEach((ele)=>{
-	// 	let objItem = {
-	// 		key:ele.key,
-	// 		label:t(ele.label),
-	// 		children:ele.children?.map((item:any)=>{
-	// 			return {
-	// 				path:item.path,
-	// 				key:item.key,
-	// 				label:t(item.label),
-	// 				onClick:()=>navigate(item.path)
-	// 			}
-	// 		})
-	// 	};
-	// 	setMenuList([...menuList,objItem])
-	// })
+	// 菜单列表
+	const [menuList]: Array<any> = useState(
+		menus.map((ele) => {
+			return {
+				key: ele.key,
+				icon: <ele.icon />,
+				label: t(ele.label),
+				children: ele.children?.map((item: any) => {
+					return {
+						path: item.path,
+						key: item.key,
+						label: t(item.label),
+						onClick: () => navigate(item.path)
+					}
+				})
+			}
+		})
+	)
 
 	// 解决刷新页面面包屑导航消失的问题
 	useEffect(() => {
 		let activeNode = JSON.parse(localStorage.getItem('activeItem') || '{}')
 		let parentNode = JSON.parse(localStorage.getItem('parentItem') || '{}')
-		if (parentNode) parentNode = menuList.find((item) => item.key === parentNode.key)
-		menuList.forEach((ele) => {
-			let result = ele.children.find((item) => item.path === location.pathname)
+		if (parentNode) parentNode = menuList.find((item: Item) => item.key === parentNode.key)
+		menuList.forEach((ele: Item | any) => {
+			let result = ele.children.find((item: Item) => item.path === location.pathname)
 			if (result) {
 				activeNode = result
 			}
@@ -115,8 +63,8 @@ function SiderMenu({ collapsed, setVisible }: IHeaderProps) {
 	// 点击菜单
 	const handleClickItem: MenuProps['onClick'] = (item) => {
 		let parentNode = item.keyPath[1]
-		let result = menuList.find((ele) => ele.key === parentNode)
-		let activeNode = result?.children.find((ele) => ele.key === item.key)
+		let result = menuList.find((ele: Item) => ele.key === parentNode)
+		let activeNode = result?.children.find((ele: Item) => ele.key === item.key)
 		configStore.operateCrumbMenu(result)
 		configStore.switchMenuItem(activeNode)
 		if (setVisible !== undefined) setVisible(false) // 收起drawer菜单
