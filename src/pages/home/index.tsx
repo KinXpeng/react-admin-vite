@@ -32,9 +32,15 @@ function Home() {
 	// };
 	return (
 		<div style={styles}>
+			<h1 style={styles.title}>Warmly Welcome!</h1>
 			<h1 style={styles.title}>
-				Welcome The <span style={styles.fontC}>Backstage Management</span> System.
+				The <span style={styles.fontC}>Backstage Management</span> System.
 			</h1>
+			<h2 style={styles.title}>Now</h2>
+			<h3 style={styles.title}>
+				<span style={styles.fontC}>React-admin-vite</span>
+			</h3>
+			<h2 style={styles.title}>is ready.</h2>
 			<p style={styles.desc}>Here You Can Start Your Code!</p>
 		</div>
 	)

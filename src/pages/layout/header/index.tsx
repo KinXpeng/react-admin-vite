@@ -159,7 +159,11 @@ function HeaderNav({ width }: IHeaderProps) {
 				</Dropdown>
 
 				{/* github */}
-				<div className="w-10 text-center cursor-pointer hover:bg-gray-100" title="cins-admin" onClick={handleLinkGit}>
+				<div
+					className="w-10 text-center cursor-pointer hover:bg-gray-100"
+					title="react-admin-vite"
+					onClick={handleLinkGit}
+				>
 					<GithubFilled className="text-base" />
 				</div>
 
