@@ -75,7 +75,7 @@ function LayoutConfig() {
 			<Layout>
 				<Header className="flex items-center !bg-white shadow-box !p-0">
 					{width < 650 ? (
-						<span className="w-24 h-full text-center cursor-pointer p-3" onClick={backHome}>
+						<span className="w-24 h-full text-center cursor-pointer px-5 py-2" onClick={backHome}>
 							<img className="w-full h-full" src={logoMini} alt="" />
 						</span>
 					) : (
