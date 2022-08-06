@@ -6,6 +6,7 @@ import { Layout, Drawer } from 'antd'
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
 import SiderMenu from './sider/index'
 import HeaderNav from './header/index'
+import logoMini from '@/assets/imgs/frame/logo_mini.png'
 const { Header, Content, Sider } = Layout
 
 function LayoutConfig() {
@@ -74,8 +75,8 @@ function LayoutConfig() {
 			<Layout>
 				<Header className="flex items-center !bg-white shadow-box !p-0">
 					{width < 650 ? (
-						<span className="w-24 text-5xl italic text-center text-red-300 cursor-pointer" onClick={backHome}>
-							C
+						<span className="w-24 h-full text-center cursor-pointer p-3" onClick={backHome}>
+							<img className="w-full h-full" src={logoMini} alt="" />
 						</span>
 					) : (
 						''

@@ -7,6 +7,8 @@ import { useTranslation } from 'react-i18next'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { menus } from '@/components/menus/index'
 import { Item } from '@/components/menus/index.d'
+import logoMini from '@/assets/imgs/frame/logo_mini.png'
+import logoOrigin from '@/assets/imgs/frame/logo_origin.png'
 
 interface IHeaderProps {
 	collapsed?: boolean
@@ -72,8 +74,8 @@ function SiderMenu({ collapsed, setVisible }: IHeaderProps) {
 
 	return (
 		<>
-			<div className="h-16 text-center text-6xl italic cursor-pointer text-blue-400 overflow-hidden" onClick={backHome}>
-				{collapsed ? 'C' : 'CINS'}
+			<div className="h-16 text-center cursor-pointer overflow-hidden p-3" onClick={backHome}>
+				<img className="w-full h-full" src={collapsed ? logoMini : logoOrigin} alt="" />
 			</div>
 			<Menu
 				theme={configStore.themeStyle}

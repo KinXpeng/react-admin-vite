@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import dark from '@/assets/icons/dark.svg'
 import light from '@/assets/icons/light.svg'
-import user from '@/assets/imgs/user.jpeg'
+import user from '@/assets/imgs/frame/user.jpeg'
 
 interface IHeaderProps {
 	width: number
