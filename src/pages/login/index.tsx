@@ -102,7 +102,7 @@ function Login() {
 		<div className="w-full h-full flex justify-center items-center opacity-80" style={style.container}>
 			{/* Login Form */}
 			<div className="w-2/3 sm:w-2/5 xl:w-1/3 2xl:w-1/4 rounded-xl pt-5 px-5 bg-white">
-				<Spin spinning={loading} className="!w-1/2">
+				<Spin spinning={loading}>
 					<div className="max-w-xs w-2/3 h-12 mb-8 mx-auto">
 						<img className="w-full h-full px-3" src={logoOrigin} alt="" />
 					</div>
