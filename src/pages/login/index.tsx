@@ -143,7 +143,7 @@ function Login() {
 						<Form.Item>
 							<Form.Item name="remember" valuePropName="checked" noStyle>
 								<div className="flex items-center">
-									<Checkbox className="w-2/5 select-none">{t('login.remember')}</Checkbox>
+									<Checkbox className="w-3/5 select-none">{t('login.remember')}</Checkbox>
 								</div>
 							</Form.Item>
 						</Form.Item>
