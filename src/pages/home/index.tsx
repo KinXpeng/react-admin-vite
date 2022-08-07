@@ -3,8 +3,9 @@ import { observer } from 'mobx-react-lite'
 
 const styles: any = {
 	textAlign: 'center',
+	paddingTop: '30px',
 	title: {
-		margin: '30px auto',
+		margin: '0 auto 30px',
 		fontSize: '55px',
 		fontWeight: '900',
 		color: '#253445',
@@ -25,13 +26,8 @@ const styles: any = {
 	}
 }
 function Home() {
-	// const [width, setWidth] = useState(window.innerWidth); // 窗口宽度
-	// // 获取窗口宽度
-	// window.onresize = () => {
-	//   setWidth(window.innerWidth);
-	// };
 	return (
-		<div style={styles}>
+		<div style={styles} className="w-full min-h-full cs-card">
 			<h1 style={styles.title}>Warmly Welcome!</h1>
 			<h1 style={styles.title}>
 				The <span style={styles.fontC}>Backstage Management</span> System.

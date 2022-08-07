@@ -79,7 +79,7 @@ function UserList() {
 		overflowX: 'auto'
 	}
 	return (
-		<div style={styles}>
+		<div style={styles} className="cs-card">
 			<Table columns={columns} dataSource={data} bordered />
 		</div>
 	)

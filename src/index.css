@@ -161,6 +161,21 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
+/* shadow-card */
+.cs-card {
+	background-color: #fff;
+	--tw-shadow: 0 1px 4px rgb(0 21 41 / 8%);
+	--tw-shadow-colored: 0 1px 4px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+	padding: 16px;
+}
+
+@media screen and (max-width: 650px) {
+	.cs-card {
+		padding: 10px;
+	}
+}
+
 /* cs-aside */
 .cs-aside :global(.ant-menu) {
 	height: calc(100% - 64px);

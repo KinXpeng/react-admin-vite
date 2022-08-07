@@ -89,10 +89,8 @@ function LayoutConfig() {
 					<HeaderNav width={width} />
 				</Header>
 				<Content
-					className="bg-white shadow-box"
 					style={{
 						margin: width < 650 ? 4 : 10,
-						padding: width < 650 ? 10 : 16,
 						minHeight: 280,
 						overflow: 'auto',
 						position: 'relative'
