@@ -23,7 +23,7 @@ class ConfigStore {
 	locale = localStorage.getItem('locale') ? localStorage.getItem('locale') : 'zh_CN' // 默认中文
 	themeStyle: any = localStorage.getItem('themeStyle') ? localStorage.getItem('themeStyle') : 'dark' // 整体风格
 	theme: themeColor = {
-		primaryColor: localStorage.getItem('primaryColor') ? localStorage.getItem('primaryColor') : '#F5222D',
+		primaryColor: localStorage.getItem('primaryColor') ? localStorage.getItem('primaryColor') : '#722ED1',
 		errorColor: '#ff4d4f',
 		warningColor: '#faad14',
 		successColor: '#52c41a',
