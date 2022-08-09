@@ -4,9 +4,9 @@ import { AppstoreOutlined, UnorderedListOutlined, UserOutlined } from '@ant-desi
 export const menus: Array<MenuItem> = [
 	// 面板管理
 	{
-		key: 'panel',
-		label: 'aside.panel.nav',
-		icon: AppstoreOutlined,
+		key: 'panel', // 一级菜单key
+		label: 'aside.panel.nav', // 菜单名称（多语言配置参考i18n/locales中的文件）
+		icon: AppstoreOutlined, // 菜单图标（图标样式参考antd官网）
 		children: [
 			{
 				path: '/analysisPanel', // 分析面板

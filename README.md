@@ -11,9 +11,7 @@ A simple template of react.
 ## Project introduction
 
 - 项目是基于 `vite` 搭建的后台管理系统（react18 版本），所有页面及功能采用函数式组件及 hooks 实现。
-
 - 项目预览：https://temp.cins.cc
-
 - 所用技术/UI 框架
   - React Hooks
   - 路由（v6 版本）：`react-router-dom`
@@ -34,22 +32,42 @@ A simple template of react.
   - token 持久化：封装工具函数使用本地储存实现 token 持久化。
   - mobx 状态管理：以`mobx-react-lite` 作为链接包，实现数据响应式；按功能拆分 store，实现 mobx 的模块化。
 
+## Usage
+
+- 菜单配置
+
+  - 新建一级菜单可写在 `router/modules` 里，需要在 `routes.ts` 中引入。
+  - 在已有的一级菜单下建二级菜单可直接在 `modules` 中找到对应的文件。
+  - 新建页面位于 `pages` 中，尽量使目录和路由的结构保持一致。
+  - 菜单的添加位于 `components/menus/index.ts` 中，可参照示例进行配置。
+
+- 多语言配置
+
+  - 多语言文件位于 `i18n/localels` 目录下，目前支持中英两种语言。
+
+  - 菜单label的使用方法参照已有的菜单配置。
+
+  - 页面中多语言的配置可参考已有页面（例：使用t('home')函数）。
+
+    ```js
+    import { useTranslation } from 'react-i18next'
+    
+    function test(){
+      const { t } = useTranslation() // 国际化 （使用时需在组件中使用，否则会报错）
+    }
+    ```
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm run start` or`yarn start`
+### `npm run dev` or `yarn dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3003](http://localhost:3003) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build` or `yarn build`
 
@@ -58,45 +76,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
