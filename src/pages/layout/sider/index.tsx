@@ -75,7 +75,11 @@ function SiderMenu({ collapsed, setVisible }: IHeaderProps) {
 	return (
 		<>
 			<div className="h-16 text-center cursor-pointer overflow-hidden px-12 py-2 sm:px-6" onClick={backHome}>
-				<img className="w-full h-full" src={collapsed ? logoMini : logoOrigin} alt="" />
+				<img
+					className={collapsed ? 'w-full h-full' : 'w-3/4 h-full m-auto'}
+					src={collapsed ? logoMini : logoOrigin}
+					alt=""
+				/>
 			</div>
 			<Menu
 				theme={configStore.themeStyle}
