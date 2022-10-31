@@ -39,7 +39,7 @@ A simple template of react.
   - 新建一级菜单可写在 `router/modules` 里，需要在 `routes.ts` 中引入。
   - 在已有的一级菜单下建二级菜单可直接在 `modules` 中找到对应的文件。
   - 新建页面位于 `pages` 中，尽量使目录和路由的结构保持一致。
-  - 菜单的添加位于 `components/menus/index.ts` 中，可参照示例进行配置。
+  - 菜单的添加同样位于 `routes.ts` 中，可参照示例进行配置。
 
 - 多语言配置
 
