@@ -1,8 +1,9 @@
 export interface Item {
-	key: string
+	key?: string
 	path?: string
 	icon?: any
 	label: string
+	component?: any
 }
 
 export interface MenuItem extends Item {
