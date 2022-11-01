@@ -39,6 +39,11 @@ function LayoutConfig() {
     width < 650 ? setCollapsed(true) : setCollapsed(false)
   }, [width])
 
+  // 监听菜单栏是否收缩
+  useEffect(() => {
+    configStore.watchCollapsed(collapsed)
+  }, [collapsed])
+
   return (
     <Layout className="h-full select-none">
       {/* 侧边栏适配移动端 */}

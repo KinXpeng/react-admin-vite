@@ -1,12 +1,24 @@
-import { useLayoutEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { observer } from 'mobx-react-lite'
+import { useStore } from '@/store/index'
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Chart } from '@antv/g2';
 import { Progress } from 'antd';
 import styles from './index.module.less'
 
 const Home = () => {
+  const { configStore } = useStore()
+  const [collapsed, setCollapsed] = useState(configStore.collapsed);
+
+  // 监听侧边栏变化
+  useEffect(() => {
+    setTimeout(() => {
+      setCollapsed(configStore.collapsed);
+    }, 300)
+  }, [configStore.collapsed])
+
   // chart1
-  useLayoutEffect(() => {
+  useEffect(() => {
     const data = [
       { year: '1991', value: 354 },
       { year: '1992', value: 291 },
@@ -50,10 +62,10 @@ const Home = () => {
 
     chart.theme({ "styleSheet": { "brandColor": "#FF4500", "paletteQualitative10": ["#FF4500", "#1AAF8B", "#406C85", "#F6BD16", "#B40F0F", "#2FB8FC", "#4435FF", "#FF5CA2", "#BBE800", "#FE8A26"], "paletteQualitative20": ["#FF4500", "#1AAF8B", "#406C85", "#F6BD16", "#B40F0F", "#2FB8FC", "#4435FF", "#FF5CA2", "#BBE800", "#FE8A26", "#946DFF", "#6C3E00", "#6193FF", "#FF988E", "#36BCCB", "#004988", "#FFCF9D", "#CCDC8A", "#8D00A1", "#1CC25E"] } });
     chart.render();
-  }, [])
+  }, [collapsed])
 
   // chart2
-  useLayoutEffect(() => {
+  useEffect(() => {
     const data = [
       { type: '1', value: 2400, },
       { type: '2', value: 654 },
@@ -101,10 +113,10 @@ const Home = () => {
         .annotation();
     });
     chart.render();
-  }, [])
+  }, [collapsed])
 
   // chart3
-  useLayoutEffect(() => {
+  useEffect(() => {
     const data = [
       { type: '1月', value: 2400, },
       { type: '2月', value: 654 },
@@ -142,7 +154,7 @@ const Home = () => {
     chart.interaction('active-region');
     chart.interval().position('type*value');
     chart.render();
-  }, [])
+  }, [collapsed])
 
   return (
     <div className="w-full h-full">
@@ -207,4 +219,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default observer(Home)

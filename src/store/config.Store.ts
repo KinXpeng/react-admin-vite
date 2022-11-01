@@ -29,6 +29,12 @@ class ConfigStore {
 		successColor: '#52c41a',
 		infoColor: '#1890ff'
 	}
+	collapsed: boolean = false
+
+	// 菜单栏收缩
+	watchCollapsed = (isCollapsed: boolean) => {
+		this.collapsed = isCollapsed
+	}
 
 	// 面包屑导航一级菜单
 	operateCrumbMenu = (item: any) => {
