@@ -60,6 +60,11 @@ const routes: Array<router> = [
 			},
 			...(childRoutes as any)
 		]
+	},
+	{
+		path: '*',
+		name: '404',
+		component: lazy(() => import('@/pages/404/index'))
 	}
 ]
 
