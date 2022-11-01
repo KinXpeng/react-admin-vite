@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Chart } from '@antv/g2';
 import { Progress } from 'antd';
@@ -6,7 +6,7 @@ import styles from './index.module.less'
 
 const Home = () => {
   // chart1
-  useEffect(() => {
+  useLayoutEffect(() => {
     const data = [
       { year: '1991', value: 354 },
       { year: '1992', value: 291 },
@@ -53,7 +53,7 @@ const Home = () => {
   }, [])
 
   // chart2
-  useEffect(() => {
+  useLayoutEffect(() => {
     const data = [
       { type: '1', value: 2400, },
       { type: '2', value: 654 },
@@ -104,7 +104,7 @@ const Home = () => {
   }, [])
 
   // chart3
-  useEffect(() => {
+  useLayoutEffect(() => {
     const data = [
       { type: '1月', value: 2400, },
       { type: '2月', value: 654 },

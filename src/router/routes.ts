@@ -36,6 +36,9 @@ export const menus: Array<MenuItem> = [
 
 const childRoutes: Array<Item> = []
 menus.forEach((ele) => {
+	ele.children?.forEach((item) => {
+		item.key = item.name
+	})
 	childRoutes.push(...(ele as any).children)
 })
 
