@@ -1,0 +1,1 @@
+function e(a,t){var n=Object.assign({},a);return Array.isArray(t)&&t.forEach(function(r){delete n[r]}),n}var o=function(){for(var t=arguments.length,n=new Array(t),r=0;r<t;r++)n[r]=arguments[r];return n};export{e as o,o as t};
