@@ -11,7 +11,7 @@ A simple template of react.
 ## Project introduction
 
 - 项目是基于 `vite` 搭建的后台管理系统（react18 版本），所有页面及功能采用函数式组件及 hooks 实现。
-- 项目预览：https://temp.cins.cc
+- 项目预览：https://temp.kinxpeng.cn
 - 所用技术/UI 框架
   - React Hooks
   - 路由（v6 版本）：`react-router-dom`
